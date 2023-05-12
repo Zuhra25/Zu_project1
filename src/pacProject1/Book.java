@@ -1,26 +1,30 @@
 package pacProject1;
 
 public class Book {
-    private String name;
-    private String author;
+    private String title;
+    private Author author;
     private int year;
 
-    public Book(String name, String author, int year) {
-        this.name = name;
+    public Book(String title, Author author, int year) {
+        this.title = title;
         this.author = author;
         this.year = year;
     }
 
-    public String getName() {
-        return this.name;
+    public String getTitle() {
+        return this.title;
     }
 
-    public String getAuthor() {
+    public Author getAuthor() {
         return this.author;
     }
 
     public int getYear() {
         return this.year;
+    }
+
+    public void setYear(int year) {
+        this.year=year;
     }
 }
 

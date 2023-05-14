@@ -1,5 +1,7 @@
 package pacProject1;
 
+import javax.swing.*;
+
 public class Book {
     private String title;
     private Author author;
@@ -24,7 +26,11 @@ public class Book {
     }
 
     public void setYear(int year) {
-        this.year=year;
+        this.year = year;
+    }
+
+    public String toString() {
+        return String.format("Книга - %s, %nАвтор - %s, %nГод - %s%n", title, author, year);
     }
 }
 

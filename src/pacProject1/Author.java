@@ -13,4 +13,10 @@ public class Author {
         return this.name;
     }
 
+    public String getSurname() {
+        return this.surname;
+    }
+    public String toString() {
+        return String.format("%s %s",name, surname);
+    }
 }

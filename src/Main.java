@@ -1,28 +1,26 @@
 import pacProject1.Book;
 import pacProject1.Author;
 
-import java.sql.SQLOutput;
 
 public class Main {
     public static void main(String[] args) {
 
-
         Author nikolayGogol = new Author("Николай", "Гоголь");
-        Book bookFromGogol1 = new Book("Мертвые души", nikolayGogol, 1842);
-        Book bookFromGogol2 = new Book("Вий", nikolayGogol, 1835);
+        Book deadSouls = new Book("Мертвые души", nikolayGogol, 1842);
 
         Author borisAkunin = new Author( "Борис", "Акунин");
-        Book bookFromAkunin1 = new Book("Азазель",borisAkunin,1998);
-        Book bookFromAkunin2 = new Book("Левиафан", borisAkunin,1998);
+        Book leviafan = new Book("Левиафан", borisAkunin,1998);
 
-        System.out.println(bookFromAkunin2.getYear());
-        bookFromAkunin2.setYear(2000);
-        System.out.println(bookFromAkunin2.getYear());
+        System.out.println(deadSouls);
+        System.out.println(leviafan);
 
-        System.out.println(bookFromAkunin2.getAuthor()); //выводит ссылку
+        //сеттер на год выпуска
+        System.out.printf("Левиафан (год выпуска) - %s%n", leviafan.getYear());
+        //leviafan.setYear(2000); // задать вручную
+        leviafan.setYear(leviafan.getYear()+2);
+        System.out.printf("Левиафан (год выпуска измененный) - %s%n%n",leviafan.getYear());
 
-
-
-
+        //вывод инфы о книге c новым годом издания
+        System.out.println(leviafan);
     }
 }

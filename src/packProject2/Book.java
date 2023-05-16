@@ -1,6 +1,7 @@
 package packProject2;
 
 import javax.swing.*;
+import java.util.Objects;
 
 public class Book {
     private String title;
@@ -29,17 +30,22 @@ public class Book {
         this.year = year;
     }
 
+    @Override
     public String toString() {
         return String.format("Книга - %s, %nАвтор - %s, %nГод - %s%n", title, author, year);
     }
 
-
-    public boolean equals(Book other) {
-        return this.year == other.year;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return year == book.year;
     }
 
+    @Override
     public int hashCode() {
-        return java.util.Objects.hash(title, author, year);
+        return Objects.hash(title, author, year);
     }
 }
 

@@ -14,35 +14,23 @@ public class Main {
 
         // equals
         System.out.printf("в какие года написаны книги:%n%s и %s%n",deadSouls.getTitle(), bookForCheck.getTitle());
+
         if (deadSouls.equals(bookForCheck)) {
             System.out.println("книги написаны в один год");
         } else
         System.out.println("книги написаны в разные года");
+        System.out.println();
+        //System.out.println(deadSouls.equals(bookForCheck));
 
         // hashCode
-        System.out.println(bookForCheck2.hashCode());
-        System.out.println(viy.hashCode());
+//        System.out.println(bookForCheck2.hashCode());
+//        System.out.println(viy.hashCode());
 
+        if (viy.hashCode()==bookForCheck2.hashCode()) {
+            System.out.printf("хэшкоды равны %s%n", viy.hashCode());
+        } else {
+            System.out.printf("хэшкоды НЕ равны %s и %s%n", viy.hashCode(), bookForCheck2.hashCode());
+        }
 
-
-//        Author borisAkunin = new Author( "Борис", "Акунин");
-//        Book leviafan = new Book("Левиафан", borisAkunin,1998);
-
-//        System.out.println(deadSouls);
-//        System.out.println(leviafan);
-//
-//        //сеттер на год выпуска
-//        System.out.printf("Левиафан (год выпуска) - %s%n", leviafan.getYear());
-//        //leviafan.setYear(2000); // задать вручную
-//        leviafan.setYear(leviafan.getYear()+2);
-//        System.out.printf("Левиафан (год выпуска измененный) - %s%n%n",leviafan.getYear());
-//
-//        //вывод инфы о книге c новым годом издания
-//        System.out.println(leviafan);
-
-
-        //Реализуйте методы equals и hashCode в классах Author и Book,
-        // которые вы создали на прошлом уроке.
-
-    }
+     }
 }

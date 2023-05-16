@@ -1,5 +1,7 @@
 package packProject2;
 
+import java.util.Objects;
+
 public class Author {
     private String name;
     private String surname;
@@ -20,4 +22,6 @@ public class Author {
     public String toString() {
         return String.format("%s %s",name, surname);
     }
+
+
 }

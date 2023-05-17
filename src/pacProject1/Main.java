@@ -1,7 +1,4 @@
-import pacProject1.Book;
-import pacProject1.Author;
-
-
+package pacProject1;
 public class Main {
     public static void main(String[] args) {
 
